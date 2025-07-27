@@ -1,1 +1,4 @@
-# workflow-spec-template
+# Template for AWS DEVCRAFT with Kiro
+
+## Getting Started
+
