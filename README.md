@@ -1,4 +1,3 @@
-# Template for AWS DEVCRAFT with Kiro
+# AWS DEVCRAFT Agent
 
 ## Getting Started
-
