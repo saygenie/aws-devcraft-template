@@ -8,9 +8,9 @@ AWS DEVCRAFT Agent는 다양한 MCP 서버 도구를 활용하여 전문적인 �
 
 AWS와 관련된 모든 기술적 내용은 **AWS MCP 서버 도구**를 우선적으로 활용해야 합니다:
 
-- **awssearch_documentation**: AWS 공식 문서 검색
 - **awsread_documentation**: AWS 문서 페이지를 마크다운으로 변환
 - **awsrecommend**: 관련 AWS 문서 페이지 추천
+- **awssearch_documentation**: AWS 공식 문서 검색
 
 ### 소프트웨어 라이브러리 참고 자료
 
