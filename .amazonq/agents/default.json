@@ -1,0 +1,75 @@
+{
+  "name": "AWS DEVCRAFT Agent",
+  "version": "1.0.0",
+  "description": "Amazon Q Developer agent configuration for the AWS DEVCRAFT program",
+  "mcpServers": {
+    "awslabs.core-mcp-server": {
+      "command": "uvx",
+      "args": [
+        "awslabs.core-mcp-server@latest"
+      ],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false
+    },
+    "aws-knowledge-mcp-server": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://knowledge-mcp.global.api.aws"
+      ],
+      "disabled": false
+    },
+    "awslabs.code-doc-gen-mcp-server": {
+      "command": "uvx",
+      "args": [
+        "awslabs.code-doc-gen-mcp-server@latest"
+      ],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "disabled": false
+    }
+  },
+  "tools": [
+    "*",
+    "@awslabs.core-mcp-server",
+    "@aws-knowledge-mcp-server",
+    "@awslabs.code-doc-gen-mcp-server",
+    "@context7"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "report_issue",
+    "@awslabs.core-mcp-server/prompt_understanding",
+    "@aws-knowledge-mcp-server/aws___read_documentation",
+    "@aws-knowledge-mcp-server/aws___recommend",
+    "@aws-knowledge-mcp-server/aws___search_documentation",
+    "@awslabs.code-doc-gen-mcp-server/plan_documentation",
+    "@context7/resolve-library-id",
+    "@context7/get-library-docs"
+  ],
+  "toolsSettings": {
+    "use_aws": {
+      "preset": "readOnly"
+    },
+    "execute_bash": {
+      "preset": "readOnly"
+    }
+  },
+  "includedFiles": [
+    "AmazonQ.md",
+    "README.md",
+    ".amazonq/rules/**/*.md"
+  ],
+  "resources": []
+}
